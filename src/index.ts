@@ -11,7 +11,7 @@ import { MongoClient, ObjectId } from "mongodb";
 const app = express();
 
 async function main() {
-    const db = new database("mongodb+srv://honyo:123@cluster0.krotx.mongodb.net/Users?retryWrites=true&w=majority");
+    const db = new database("mongodb+srv://<Username>:<Password>@cluster0.krotx.mongodb.net/Users?retryWrites=true&w=majority");
     db.connection();
     //db.insert(new User("Jusukisorono"));
     //db.remove("Jusukisorono")

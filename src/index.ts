@@ -6,7 +6,7 @@ import User from './model/user';
 
 const app = express();
 const port = 3000;
-export const uri = "mongodb+srv://honyo:123@cluster0.krotx.mongodb.net/Users?retryWrites=true&w=majority";
+export const uri = "mongodb+srv://<Username>:<Password>@cluster0.krotx.mongodb.net/Users?retryWrites=true&w=majority";
 
 app.get('/', (req, res) => {
     res.send('Send completed');

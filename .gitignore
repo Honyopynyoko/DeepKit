@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.gitignore
 *.log
 tmp/
 node_modules/

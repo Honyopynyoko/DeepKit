@@ -35,6 +35,7 @@
     "express": "^4.17.1",
     "mongo": "^0.1.0",
     "mongodb": "^3.6.10",
+    "nodemon": "^2.0.12",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.0"
   },

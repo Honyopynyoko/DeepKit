@@ -17,13 +17,11 @@ export default class DB {
     }
 
     async read(readObject: string){
-        const users = (await this.connection()).query(User).filter({username: `${ readObject }`}).findOne();
-        return users;
+        return (await this.connection()).query(User).filter({username: `${ readObject }`}).findOne();
     }
 
     async readAll(){
-        const users = (await this.connection()).query(User).find();
-        return users;
+        return (await this.connection()).query(User).find();
     }
     async remove(removeObject: string){
         const user = await this.read(removeObject);

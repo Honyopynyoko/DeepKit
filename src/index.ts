@@ -1,6 +1,6 @@
 import express from "express";
 import { json } from "body-parser";
-import { usersRouter } from './routes/userGET';
+import { usersRouter } from './routes/users';
 import database from "./model/database/database";
 
 const app = express();

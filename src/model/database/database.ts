@@ -23,10 +23,17 @@ export default class DB {
     async readAll(){
         return (await this.connection()).query(User).find();
     }
+
     async remove(removeObject: string){
         const user = await this.read(removeObject);
         (await this.connection()).remove(user);
         console.log(`Object ${removeObject} removed`);
+    }
+
+    async update(filter: string, replacementValue: string){
+        await this.remove(filter);
+        const updatedUser = new User(replacementValue);
+        await this.insert(updatedUser);
     }
     /**
      * URI parameter needed to connect to MongoDB. Only application valid URI's are allowed.
